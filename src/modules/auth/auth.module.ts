@@ -9,6 +9,7 @@ import { env } from 'src/shared/config/env';
     JwtModule.register({
       secret: env.jwtSecret,
       signOptions: { expiresIn: '7d' },
+      global: true,
     }),
   ],
   controllers: [AuthController],
